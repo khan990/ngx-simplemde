@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-simple-mde",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  }
+}

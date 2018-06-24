@@ -128,6 +128,46 @@
           }
         }
       }
+    },
+    "ngx-simple-mde": {
+      "root": "projects/ngx-simple-mde",
+      "sourceRoot": "projects/ngx-simple-mde/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-simple-mde/tsconfig.lib.json",
+            "project": "projects/ngx-simple-mde/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-simple-mde/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-simple-mde/src/test.ts",
+            "tsConfig": "projects/ngx-simple-mde/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-simple-mde/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-simple-mde/tsconfig.lib.json",
+              "projects/ngx-simple-mde/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-simplemde"

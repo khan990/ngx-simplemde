@@ -1,17 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgxSimpleMdeComponent } from './app.component';
+import { AppComponent } from './app.component';
+
+import { NgxSimpleMdeModule } from '../../projects/ngx-simple-mde/src/lib/ngx-simple-mde.module';
 
 @NgModule({
   declarations: [
-    NgxSimpleMdeComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxSimpleMdeModule
   ],
   providers: [],
-  bootstrap: [ NgxSimpleMdeComponent ],
-  exports: [ NgxSimpleMdeComponent ]
+  bootstrap: [ AppComponent ],
+  exports: [ ]
 })
-export class NgxSimpleMdeModule { }
+export class AppModule { }
